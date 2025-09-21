@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 
 class MoenvOpenApiAgent(LlmAgent):
     def __init__(self, model_name: str, api_base: str | None = None, api_key: str | None = None):
-        lite_llm_config = {"model": model_name, "max_tokens": 4096}
+        lite_llm_config = {"model": model_name, "max_output_tokens": 4096}
         if api_base:
             lite_llm_config["api_base"] = api_base
         if api_key:
